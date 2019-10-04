@@ -12,6 +12,10 @@
     "heroku-postbuild": "ng build --prod",
     "deploy": "git push origin master && git push heroku master"
   },
+  "engines": {
+    "node": "10.16.3",
+    "npm": "6.9.0"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.0",

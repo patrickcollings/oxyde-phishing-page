@@ -1,0 +1,66 @@
+:host {
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-image: url("https://acctcdn.msauth.net/images/convergedbg_v2_pdvUOT_2pyXH5ith335y8A2.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+    height: 398px;
+    background-color: white;
+    padding: 30px 44px;
+}
+
+.logo .logo-image {
+    background-color: #ffffff;
+    background-image: url("https://acctcdn.msauth.net/images/microsoft_logo_7lyNn7YkjJOP0NwZNw6QvQ2.svg");
+    width: 108px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.info-para {
+    margin-top: 0;
+    font-size: 14px;
+}
+
+.button-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.button-container button {
+    width: 112px;
+    height: 32px;
+    background-color: #0067b8;
+    color: white;
+    border: none;
+}
+
+.form-field {
+    padding-top: 3px;
+}
+
+::ng-deep .mat-form-field-infix {
+    border: none;
+    padding: none;
+}

@@ -11,12 +11,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MissingPageComponent } from './missing-page/missing-page.component';
+import { OutlookResetComponent } from './outlook-reset/outlook-reset.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    MissingPageComponent
+    MissingPageComponent,
+    OutlookResetComponent
   ],
   imports: [
     BrowserModule,

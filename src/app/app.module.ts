@@ -12,13 +12,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MissingPageComponent } from './missing-page/missing-page.component';
 import { OutlookResetComponent } from './outlook-reset/outlook-reset.component';
+import { GoogleResetComponent } from './google-reset/google-reset.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     MissingPageComponent,
-    OutlookResetComponent
+    OutlookResetComponent,
+    GoogleResetComponent
   ],
   imports: [
     BrowserModule,

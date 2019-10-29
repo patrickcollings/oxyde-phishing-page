@@ -1,0 +1,40 @@
+:host {
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+    height: 500px;
+    background-color: white;
+    padding: 30px 44px;
+    border: solid 1px lightgrey;
+    border-radius: 8px;
+}
+
+.logo .logo-image {
+    background-color: #ffffff;
+    background-image: url("https://cdn.vox-cdn.com/thumbor/Pkmq1nm3skO0-j693JTMd7RL0Zk=/0x0:2012x1341/1200x800/filters:focal(0x0:2012x1341)/cdn.vox-cdn.com/uploads/chorus_image/image/47070706/google2.0.0.jpg");
+    width: 108px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-login',
@@ -26,11 +27,12 @@ export class LoginComponent implements OnInit {
       console.log(this.userId); // Print the parameter to the console. 
       console.log(this.campaignId); // Print the parameter to the console. 
       console.log(this.companyId); // Print the parameter to the console. 
+    
     });
   }
 
   submit() {
-    this.http.post<any>('http://localhost:4000/email/caught', {
+    this.http.post<any>(`${environment.apiUrl}/email/caught/credentials`, {
       userId: this.userId,
       campaignId: this.campaignId,
     }).subscribe(res => { });

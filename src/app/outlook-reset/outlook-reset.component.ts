@@ -27,15 +27,19 @@ export class OutlookResetComponent implements OnInit {
       console.log(this.userId); // Print the parameter to the console. 
       console.log(this.campaignId); // Print the parameter to the console. 
       console.log(this.companyId); // Print the parameter to the console. 
+      this.http.post<any>(`${environment.apiUrl}/email/caught/link`, {
+        userId: this.userId,
+        campaignId: this.campaignId,
+      }).subscribe(res => { });
     });
   }
 
   submit() {
-    this.http.post<any>(`${environment.apiUrl}/email/caught`, {
+    this.http.post<any>(`${environment.apiUrl}/email/caught/credentials`, {
       userId: this.userId,
       campaignId: this.campaignId,
     }).subscribe(
-      res => { 
+      res => {
         window.open('https://account.microsoft.com/account/', '_self');
       },
       err => {

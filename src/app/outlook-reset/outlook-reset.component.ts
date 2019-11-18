@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { EventService } from '../_services/event.service';
 
 @Component({
   selector: 'app-outlook-reset',
@@ -16,7 +17,8 @@ export class OutlookResetComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private http: HttpClient
+    private http: HttpClient,
+    private eventService: EventService
   ) { }
 
   ngOnInit() {
@@ -27,18 +29,13 @@ export class OutlookResetComponent implements OnInit {
       console.log(this.userId); // Print the parameter to the console. 
       console.log(this.campaignId); // Print the parameter to the console. 
       console.log(this.companyId); // Print the parameter to the console. 
-      this.http.post<any>(`${environment.apiUrl}/email/caught/link`, {
-        userId: this.userId,
-        campaignId: this.campaignId,
-      }).subscribe(res => { });
+      // User opened link
+      this.eventService.link(this.userId, this.campaignId).subscribe(res => { });
     });
   }
 
   submit() {
-    this.http.post<any>(`${environment.apiUrl}/email/caught/credentials`, {
-      userId: this.userId,
-      campaignId: this.campaignId,
-    }).subscribe(
+    this.eventService.credential(this.userId, this.campaignId).subscribe(
       res => {
         window.open('https://account.microsoft.com/account/', '_self');
       },
